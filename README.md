@@ -27,7 +27,7 @@ O **ContextoAI** é um projeto open-source que combina **Model Context Protocol 
 
 ## � Como Executar  
 ```bash
-git clone https://github.com/seu-usuario/ContextoAI.git  
-cd ContextoAI  
+git clone https://github.com/tenebra-dev/day-guard-ai.git  
+cd day-guard-ai
 pip install -r requirements.txt  
 python main.py  
