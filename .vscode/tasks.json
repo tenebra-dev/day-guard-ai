@@ -1,0 +1,60 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Install deps",
+      "type": "shell",
+      "command": "python -m venv .venv; .\\.venv\\Scripts\\Activate.ps1; python -m pip install --upgrade pip; pip install -e .[dev]",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run API",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; uvicorn app.main:app --reload --port 8000",
+      "problemMatcher": "$tsc",
+      "isBackground": true
+    },
+    {
+      "label": "Tests",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; pytest -q",
+      "problemMatcher": []
+    },
+    {
+      "label": "Lint",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; ruff check .",
+      "problemMatcher": []
+    },
+    {
+      "label": "Format",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; black .",
+      "problemMatcher": []
+    },
+    {
+      "label": "Alembic upgrade head",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; alembic upgrade head",
+      "problemMatcher": []
+    },
+    {
+      "label": "Alembic downgrade -1",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; alembic downgrade -1",
+      "problemMatcher": []
+    },
+    {
+      "label": "Alembic revision autogenerate",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; alembic revision --autogenerate -m \"auto\"",
+      "problemMatcher": []
+    },
+    {
+      "label": "Alembic stamp 20250809_000001",
+      "type": "shell",
+      "command": ".\\.venv\\Scripts\\Activate.ps1; alembic stamp 20250809_000001",
+      "problemMatcher": []
+    }
+  ]
+}

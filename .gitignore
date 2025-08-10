@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.so
+*.egg-info/
+.dist/
+build/
+dist/
+
+# Virtual env
+.venv/
+.env
+
+# VS Code
+.vscode/*.log
+
+# Test & Coverage
+.pytest_cache/
+.coverage*
+htmlcov/
+
+# Byte-compiled / cache
+*.cache/
+
+# Local files
+*.local
+
+# Docker
+.docker/
+*.tar
